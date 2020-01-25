@@ -1,0 +1,44 @@
+<html>
+
+
+<head>
+
+
+<script>
+   var stringToCapitalize = prompt("Enter string", "e.g. This is dummy string");
+        var capitalizeString = capitalizeFirstChar(stringToCapitalize);
+        console.log(capitalizeString);
+        function capitalizeFirstChar(stringToCapitalize){
+            var stringArray = stringToCapitalize.split(" ");
+            var capitalizeString = "";
+            var capitalChar, remainingString, space=" ";
+            for(var i = 0; i < stringArray.length; i++){
+                //Changing first character to upper case
+                capitalChar = stringArray[i].charAt(0).toUpperCase();
+                //extracting remaining word
+                remainingString = stringArray[i].slice(1);
+                //appending the capitalize word in string
+                capitalizeString = capitalizeString.concat(capitalChar, remainingString, space);
+            }
+            return capitalizeString;
+        }
+        //-------------------------------------------------
+        //-------------------------------------------------
+        //--------------------- Part 2 --------------------
+        var inputNumber = prompt("Enter any positive number to calculate factorial","e.g. 5 or 9 or 23");
+        var factorial = factorialize(inputNumber);
+        console.log(factorial);
+        function factorialize(inputNumber){
+            
+            var factorial = 1;
+        
+            while (inputNumber !== 1){
+                factorial = factorial * inputNumber--;
+            }
+            return factorial;
+        }
+    </script>
+    </head>
+
+
+</html>
